@@ -1,0 +1,21 @@
+<div class="container">
+  <%= form_for @caesar, url: caesar_index_path do |f|  %>
+    <%= f.label :word %>
+    <%= f.text_area :word %>
+    <%= f.label :count %>
+    <%= f.text_field :count %>
+    <%= f.submit "Encrypt" %>
+    <% end %>
+</div>
+
+<div class="container">
+  <%= form_for @caesar, url: caesar_decrypt_path do |f|  %>
+    <%= f.label :word %>
+    <%= f.text_area :word, default: "" %>
+    <%= f.label :count %>
+    <%= f.text_field :count %>
+    <%= f.submit "Decrypt" %>
+  <% end %>
+</div>
+
+Result = <%= @result %>
